@@ -12,14 +12,16 @@ const Fixtures = mongoose.Schema;
 
 const FixtureSchema = new Fixtures(
   {
-    teams:[{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Team",
-      required: true,
-    }],
+    teams: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Team",
+        required: true,
+      },
+    ],
     date: {
       type: Date,
-      required: true
+      required: true,
     },
     stadium: {
       type: String,
@@ -35,6 +37,7 @@ const FixtureSchema = new Fixtures(
     homeTeam: {
       type: String,
       trim: true,
+      required: true,
     },
   },
   { timestamps: true }

@@ -23,11 +23,12 @@ const registerAdmin = async (req, res, next) => {
         message: "Email exists, please login",
       });
     }
-    if (password.length < 8)
-    {return res.status(400).json({
-      message: "password must be at least 8 characters"
-    })}
-    if (phoneNumber.length < 10 || phoneNumber.length >13) {
+    if (password.length < 8) {
+      return res.status(400).json({
+        message: "password must be at least 8 characters",
+      });
+    }
+    if (phoneNumber.length < 10 || phoneNumber.length > 13) {
       return res.status(400).json({
         message: "phoneNumber invalid",
       });
